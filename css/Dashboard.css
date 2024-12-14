@@ -1,0 +1,332 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #0e1618, #1c2735);
+  color: #fff;
+  padding: 20px 10%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 20px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 2px;
+}
+
+/* Make sure the icons are properly aligned and centered */
+.nav-icons {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px; /* Add space between icons */
+}
+
+.nav-icons .icon {
+    display: flex; /* Ensure the icons are displayed */
+    align-items: center; /* Align icon vertically */
+    justify-content: center; /* Align icon horizontally */
+    position: relative; /* Position relative for potential absolute elements inside */
+    color: white; /* Make sure icons are visible */
+  }
+  
+  /* Make sure the icons are not hidden by other CSS properties */
+  .nav-icons .icon svg {
+    width: 24px; /* Ensure the SVGs are big enough */
+    height: 24px; /* Same as width for consistent sizing */
+  }
+  .nav-icons .profile-icon {
+    font-size: 20px;
+    background-color: #333; /* Make it prominent */
+    padding: 5px;
+    border-radius: 50%; /* Circle */
+    display: inline-flex; /* To ensure it's displayed properly */
+    justify-content: center;
+    align-items: center;
+  }
+  
+/* Ensure that the icons do not overflow and look good on mobile */
+@media (max-width: 768px) {
+  .nav-icons {
+    gap: 15px; /* Reduce gap for smaller screens */
+  }
+
+  .nav-icons .icon span {
+    font-size: 14px; /* Adjust font size on smaller screens */
+  }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(240, 248, 255, 1)
+  );
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0066cc;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+/* Job Category Styles */
+.job-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 16px;
+  padding: 32px 0;
+}
+
+.category {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 16px 32px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 200px; /* Set a fixed width for categories */
+}
+
+.category i {
+  font-size: 30px; /* Adjust size of icons */
+  color: #123456; /* Icon color */
+  margin-bottom: 10px;
+}
+
+.category:hover {
+  background-color: #f0f0f0;
+  border-color: #123456;
+}
+
+.category:hover i {
+  color: #ffcc00; /* Change icon color on hover */
+}
+/* Container for the search bar */
+.search-bar-container {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px); /* Start right next to the search icon */
+  transform: translateY(-50%);
+  width: 0; /* Start with width 0 */
+  opacity: 0; /* Start with opacity 0 */
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.category {
+  text-align: center;
+}
+
+.category-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 100%;
+  max-width: 160px;
+}
+
+.category-btn i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.category-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.category-btn span {
+  font-size: 14px;
+}
+
+.category-btn:focus {
+  outline: none;
+}
+
+/* Container for the search bar */
+.search-bar-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0; /* Initially hidden */
+  opacity: 0; /* Initially hidden */
+  transition: width 0.3s ease, opacity 0.3s ease;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Input field inside the search bar */
+.search-bar {
+  width: 180px;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #333;
+}
+
+/* Close button style */
+.close-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* The search bar is expanded and visible when it has the 'active' class */
+.search-bar-container.active {
+  width: 250px; /* Adjust the width to your needs */
+  opacity: 1;
+}
+
+/* Initially hide the search bar */
+.search-bar-container {
+  display: none;
+}
+
+/* Display the search bar when it's active */
+.search-bar-container.active {
+  display: flex;
+}
+
+/* Ensure the Search icon is aligned to the left */
+.search-icon {
+  margin-right: 20px;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .category {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .job-categories {
+    gap: 15px;
+  }
+
+  .category {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .category {
+    width: 90%;
+    height: 180px;
+  }
+}

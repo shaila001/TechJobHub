@@ -1,0 +1,47 @@
+Graphic Designer
+UI Designer
+Motion Graphics Designer
+3D Animator
+Product Designer
+Interaction Designer
+UX Research
+Back-end Developer
+Full Stack Developer
+Embedded Systems Developer
+Game Developer (2D/3D)
+Mobile Application Developer
+AR/VR Developer
+Firmware Developer
+DevOps Engineer
+Site Reliability Engineer (SRE)
+Data Scientist
+Junior NLP Engineer
+AI/ML Engineer
+Computer Vision Engineer
+Generative AI Specialist
+Data Engineer
+AI Ethics Specialist
+Big Data Analyst
+Robotics Engineer
+IoT Solutions Architect
+Edge AI Developer
+Control Systems Engineer
+Autonomous Systems Engineer
+Network Engineer
+Cloud Engineer
+Systems Administrator
+Cloud Solutions Architect
+Infrastructure Engineer
+Wireless Network Specialist
+Quality Assurance Tester
+Test Automation Engineer
+Penetration Tester (Ethical Hacker)
+Load and Performance Tester
+Front-end Developer
+Progressive Web App (PWA) Developer
+API Developer
+Low-Code/No-Code Developer
+Scrum Master
+Technical Program Manager
+IT Business Analyst
+Product Owner

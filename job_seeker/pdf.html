@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Preview</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <style>
+        canvas {
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF File Preview</h1>
+    <input type="file" id="upload-pdf" accept=".pdf">
+    <canvas id="pdf-render"></canvas>
+
+    <script>
+        const pdfjsLib = window['pdfjs-dist/build/pdf'];
+        const fileInput = document.getElementById('upload-pdf');
+        const canvas = document.getElementById('pdf-render');
+        const context = canvas.getContext('2d');
+
+        fileInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file && file.type === "application/pdf") {
+                const fileReader = new FileReader();
+                fileReader.onload = function() {
+                    const typedarray = new Uint8Array(this.result);
+
+                    // Load the PDF document
+                    pdfjsLib.getDocument(typedarray).promise.then(pdfDoc => {
+                        console.log("PDF Loaded");
+
+                        // Render the first page
+                        pdfDoc.getPage(1).then(page => {
+                            console.log("Page Loaded");
+
+                            const viewport = page.getViewport({ scale: 1.5 });
+                            canvas.height = viewport.height;
+                            canvas.width = viewport.width;
+
+                            const renderContext = {
+                                canvasContext: context,
+                                viewport: viewport
+                            };
+                            page.render(renderContext);
+                        });
+                    }).catch(error => {
+                        console.error("Error loading PDF:", error);
+                        alert("Failed to load PDF file.");
+                    });
+                };
+                fileReader.readAsArrayBuffer(file);
+            } else {
+                alert("Please upload a valid PDF file.");
+            }
+        });
+    </script>
+</body>
+</html>

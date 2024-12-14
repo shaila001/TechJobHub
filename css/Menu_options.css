@@ -1,0 +1,234 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 280px;
+    background: linear-gradient(135deg, #2f3c52, #1c2d3f); /* Gradient background */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    height: 100%;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2); /* Depth and subtle shadow */
+    transition: all 0.3s ease;
+}
+
+/* Logo Section */
+.logo {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #555;
+    background-color: #1a252f;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-links li {
+    width: 100%;
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    padding: 18px 25px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    border-left: 4px solid transparent;
+    margin-bottom: 5px;
+    border-radius: 6px;
+}
+
+.nav-links li a:hover {
+    background-color: #34495e; /* Slightly lighter background */
+    transform: scale(1.03); /* Smooth scaling */
+}
+
+/* Border effect on hover */
+.nav-links li a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover:before {
+    background-color: #ff6f61; /* New accent color */
+}
+
+/* Dropdown Menu Styling */
+.nav-links li ul {
+    display: none;
+}
+
+.nav-links li:hover ul {
+    display: block;
+    padding-left: 25px;
+    background-color: #34495e;
+}
+
+.nav-links li ul li a {
+    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+    color: #bbb;
+}
+
+.nav-links li ul li a:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/* Icon Styling */
+.icon {
+    font-size: 20px;
+    margin-right: 20px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for icons */
+.nav-links li a:hover .icon {
+    transform: rotate(20deg); /* Rotate icon when hovered */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        transition: width 0.3s ease;
+    }
+
+    .sidebar.active {
+        width: 250px;
+    }
+
+    .nav-links li a {
+        font-size: 15px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+}
+
+
+.main-content {
+    flex: 1;
+    background-color: #f5f5f5;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.topbutton a {
+    padding: 8px 15px;
+    background-color: #444;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.topbutton a:hover {
+    background-color: #57abc5;
+}
+
+/* Styling for the icon container */
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;  /* Icon container size */
+    height: 40px;
+    margin-left: 15px;  /* Space between icons */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-icons a:hover {
+    background-color: #294774;  /* Darker background color on hover */
+}
+
+/* Ensure icons are scaled within their containers */
+.icon svg {
+    width: 24px;
+    height: 24px;
+    fill: white;  /* Icon color */
+}
+
+/* Optional: Add a color change on hover to the icons */
+.nav-icons a:hover .icon svg {
+    fill: #ffcc00;  /* Change icon color on hover */
+}

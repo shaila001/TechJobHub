@@ -1,0 +1,166 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #3c8d99, #56a3b9); /* Gradient background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #ffd700;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px; /* Increased logo size */
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover img {
+    transform: scale(1.1); /* Hover effect for logo */
+}
+
+header nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header nav a:hover {
+    color: #ffd700;
+    transform: scale(1.1); /* Hover effect on links */
+}
+
+/* Form Container */
+.form-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    transform: translateY(-10px); /* Slight hover effect for the form */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Input Fields */
+form input[type="text"],
+form input[type="url"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 15px 25px;
+    margin: 18px 0;
+    background-color: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="url"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #3c8d99;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(60, 141, 153, 0.5); /* Glow effect on focus */
+}
+
+/* Labels */
+form label {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* Submit Button */
+form button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #3c8d99;
+    color: white;
+    border: none;
+    border-radius: 12px; /* Rounded button */
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #56a3b9;
+    transform: translateY(-2px); /* Hover effect */
+}
+
+form button[type="submit"]:active {
+    background-color: #3c8d99;
+    transform: translateY(2px); /* Active effect */
+}
+
+/* Adding Spacing Between Fields */
+form .field-group {
+    margin-bottom: 30px;
+}
+
+
+/* Responsive Design for Forms */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 25px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    form input[type="text"],
+    form input[type="url"],
+    form input[type="email"],
+    form input[type="password"] {
+        padding: 12px 18px;
+    }
+
+    form button[type="submit"] {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+}

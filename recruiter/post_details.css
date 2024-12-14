@@ -1,0 +1,84 @@
+/* Job Details Section */
+.job-details {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.job-details h2 {
+    font-size: 32px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Labels (strong) */
+.job-details strong {
+    color: #555;
+    font-weight: 600;
+}
+
+/* Paragraphs and Text */
+.job-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Section for each piece of info */
+.job-details .info-section {
+    margin-bottom: 20px;
+}
+
+/* Styling for the Location, Job Type, etc. */
+.job-details .info-section p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Apply soft background to sections */
+.job-details .info-section {
+    background-color: #fafafa;
+    border-left: 5px solid #4CAF50;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.job-details .info-section p strong {
+    color: #333;
+}
+
+/* Styling for the 'Deadline' and 'Responsibilities' sections */
+.job-details .info-section .deadline,
+.job-details .info-section .responsibilities {
+    font-size: 16px;
+    font-weight: 500;
+    color: #777;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .job-details h2 {
+        font-size: 28px;
+    }
+
+    .job-details p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-details h2 {
+        font-size: 24px;
+    }
+
+    .job-details p {
+        font-size: 14px;
+    }
+}

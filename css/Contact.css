@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+  }
+  
+  .contact-details {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 50%; /* Adjust based on your preference */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contact-details h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details p {
+    color: #7f8c8d;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-details li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    align-items: center; /* Aligns icons with text vertically */
+    display: flex; /* Makes the icon align nicely with the text */
+  }
+  
+  .contact-details li i {
+    min-width: 30px; /* Ensures icons are evenly spaced */
+    color: #16a085; /* Sets a color for the icons */
+  }
+  
+  .contact-details li a {
+    color: #16a085;
+    text-decoration: none;
+    margin-left: 5px; /* Adds spacing between the label and link */
+  }
+  
+  .contact-details li a:hover {
+    text-decoration: underline;
+  }
+   /* Back Button Styling */
+   .back-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #d6e9f7;
+}
+
+.back-btn i {
+    margin-right: 8px;
+}  

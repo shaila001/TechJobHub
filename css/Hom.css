@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep video in the background */
+}
+
+#background-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    max-width: 80%;
+    padding: 20px;
+}
+
+/* Header styling - Position at the top */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  position: absolute; /* Fixed position at the top of the page */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Adjust distance from the left */
+  color: white;
+  z-index: 10; /* Make sure it's above other content */
+}
+
+/* Logo styling */
+.logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  border-radius: 50%; /* Round the logo */
+  padding: 5px;
+  object-fit: cover; /* Ensure logo maintains aspect ratio */
+}
+
+/* Title styling */
+.title {
+  font-size: 50px;
+  margin: 0;
+}
+
+
+.main-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.get-started-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+    background-color: #45a049;
+}
